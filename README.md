@@ -8,5 +8,3 @@ When X scores a box, it turns blue. When O scores, it turns yellow. If the box i
 If a small field becomes full and a player directs their opponent to that square, they will play in the first large tile with and empty field spot from the top left.
 
 You win by scoring three large tiles in a row! If all 3 tiles are green, it ends in a draw.
-
-Put up on Github page so it can be hosted for free.
