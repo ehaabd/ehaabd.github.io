@@ -138,7 +138,7 @@ function restart() {
     })
 
     playableBox = 4;
-    playerText.innerHTML = 'Tic Tac Toe';
+    playerText.innerHTML = 'Tic Tac Toe Squared';
     currentPlayer = X_TEXT;
     startGame();
 }
