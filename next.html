@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Secret Website</title>
+    <style>
+        .container {
+          height: 1000px;
+          position: relative;
+          background-color: darkslategrey;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        .white {
+            color: whitesmoke;
+        }
+
+        .slate {
+            color: darkslategray;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php" class="container">
+      <div class="center">
+        <p style="color: whitesmoke">Looks like you have a message from Mr. Ehaab Dhaliwal!</p>
+        <!--<iframe width="720px" height="405px" src="https://www.youtube.com/embed/se5S1r2lpWY"></iframe>-->
+        <video width="720px" height="405px" controls="controls"><source src="video.mp4" type="video/mp4" /></video>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
