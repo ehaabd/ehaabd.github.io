@@ -1,17 +1,45 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home of Ehaab!</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
-    <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="tic-tac-toe.html">Tic Tac Toe</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
-</head>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Secret Website</title>
+  </head>
+<body>
+    <style>
+        .container {
+          height: 500px;
+          position: relative;
+          background-color:darkslategrey;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
 
+        .white {
+            color: whitesmoke;
+        }
+
+        .slate {
+            color: darkslategray;
+        }
+    </style>
+
+    <form action="/action_page.php" class="container">
+        <div class="center">
+        <label style="color:whitesmoke" for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" class="colors"><br><br>
+        <label style="color:whitesmoke" for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" class="colors"><br><br>
+        <input type="button" id="submitButton" value="Submit" style="color:darkslategray">
+      </form>
+</body>
+</html>
+
+<script src="script.js"></script>
