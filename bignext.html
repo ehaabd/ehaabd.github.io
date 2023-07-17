@@ -27,19 +27,26 @@
         .slate {
             color: darkslategray;
         }
+
+        .confetti{
+            max-width: 1500px;
+            display: block;
+            margin: 0 auto;
+            user-select: none;
+        }
     </style>
   </head>
   <body>
     <form action="/action_page.php" class="container">
-      <div class="center">
-        <p style="color: whitesmoke">Looks like you have a message from Mr. Ehaab Dhaliwal!</p>
-        <!--<iframe width="720px" height="405px" src="https://www.youtube.com/embed/se5S1r2lpWY"></iframe>-->
-        <video width="720px" height="405px" controls="controls"><source src="video.mp4" type="video/mp4" /></video>
-      </div>
-      <div class="center">
-        <input type="button" id="nextButton" style="margin-top: 600px;" value="Next" style="color:darkslategray">
-      </div>
+        <div id="confetti-container" class="center">
+            <div class="card">
+              <canvas class="confetti" id="canvas"></canvas>
+            </div>
+          </div>
+          <div class="center">
+            <p style="color: whitesmoke">Happy Birthday!</p>
+          </div>
     </form>
-    <script src="script1.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>
