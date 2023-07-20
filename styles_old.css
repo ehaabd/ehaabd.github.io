@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #ffffff;
+    --yellow: #fcef00;
+    --blue: #1582ca;
+    --green: #00ff00;
+    --winning-yellow: #777300;
+    --winning-blue: #003c64;
+}
+
+body {
+    color: var(--red);
+    font-family: 'Finger Paint', cursive;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+#gameboardMini{
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1px;
+}
+
+.boxMini{
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 60px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-top: 1px;
+    border-left: 1px;
+}
+
+.boxMini:nth-child(3n){
+    border-right: none;
+}
+
+.boxMini:nth-child(6) ~ .boxMini{
+    border-bottom: none;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 180px;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--red);
+    color: #000000;
+    border-color: var(--red);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    font-family: 'Finger Paint', cursive;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
