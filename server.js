@@ -1,33 +1,60 @@
 const express = require('express');
-const fs = require('fs');
+const bodyParser = require('body-parser');
+const fs = require('fs-extra');
 const path = require('path');
+
 const app = express();
 const port = 3000;
 
-// Middleware to parse JSON data from the client
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+const eventsFilePath = path.join(__dirname, 'data', 'events.json');
+const publicDirectory = path.join(__dirname, 'public');
 
-// Serve static files from the "public" folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
+app.use(express.static(publicDirectory));
 
-// Set up a route to handle the /submitEventData POST request
 app.post('/submitEventData', (req, res) => {
   const eventData = req.body;
 
-  const eventDataJSON = JSON.stringify(eventData, null, 2);
-
-  fs.writeFile(path.join(__dirname, 'events.json'), eventDataJSON, (err) => {
+  fs.readFile(eventsFilePath, 'utf8', (err, data) => {
     if (err) {
-      console.error('Error writing to events.json:', err);
-      res.status(500).send('Error writing to events.json');
+      res.status(500).send('Error reading events data');
     } else {
-      console.log('Event data saved to events.json successfully!');
-      res.status(200).send('Event data saved successfully!');
+      let events = [];
+      if (data) {
+        events = JSON.parse(data);
+      }
+      events.push(eventData);
+
+      fs.writeFile(eventsFilePath, JSON.stringify(events, null, 2), 'utf8', (err) => {
+        if (err) {
+          res.status(500).send('Error writing events data');
+        } else {
+          res.send('Event data saved successfully!');
+        }
+      });
     }
   });
 });
 
+app.get('/getEventData', (req, res) => {
+  fs.readFile(eventsFilePath, 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send('Error reading events data');
+    } else {
+      const events = JSON.parse(data);
+      res.json(events);
+    }
+  });
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(publicDirectory, 'index.html'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicDirectory, 'host.html'));
+});
+
 app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
