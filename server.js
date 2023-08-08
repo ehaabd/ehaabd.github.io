@@ -47,12 +47,21 @@ app.get('/getEventData', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(publicDirectory, 'index.html'));
+// Serve JSON data at /data/events.json
+app.get('/data/events.json', (req, res) => {
+  fs.readFile(eventsFilePath, 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send('Error reading events data');
+    } else {
+      const events = JSON.parse(data);
+      res.json(events);
+    }
+  });
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(publicDirectory, 'host.html'));
+// Handle other routes
+app.get('/', (req, res) => {
+  res.sendFile(path.join(publicDirectory, 'index.html'));
 });
 
 app.listen(port, () => {
