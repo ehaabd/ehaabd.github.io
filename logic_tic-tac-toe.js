@@ -107,16 +107,14 @@ function playerHasWonMini(){
 
 function playerHasWon() {
     for (const condition of winningCombos) {
-        let [a, b, c] = condition
+        let [a, b, c] = condition;
 
-        
-
-        if(spaces[a] != null && ((spaces[a]==spaces[b] || spaces[a] == 'Y') && (spaces[a]==spaces[c] || spaces[c] == 'Y') && (spaces[c]==spaces[b] || spaces[b] == 'Y'))){
-            if(spaces[a] != 'Y'){
+        if (spaces[a] !== null && (spaces[a] === spaces[b] || spaces[b] === "Y") && (spaces[a] === spaces[c] || spaces[c] === "Y")) {
+            if (spaces[a] !== "Y") {
                 return spaces[a];
-            }else if(spaces[b] != 'Y'){
+            } else if (spaces[b] !== "Y") {
                 return spaces[b];
-            }else if(spaces[c] != 'Y'){
+            } else if (spaces[c] !== "Y") {
                 return spaces[c];
             }else{
                 playerText.innerHTML = 'Um . . . Why would you do this? Nobody wins!';
@@ -124,8 +122,10 @@ function playerHasWon() {
             }
         }
     }
+
     return false;
 }
+
 
 function restart() {
     spaces.fill(null);
