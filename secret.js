@@ -1,13 +1,29 @@
 function sayIt() {
+    var h1 = document.querySelector('.overlay-content h1');
+    var pElements = document.querySelectorAll('.overlay-content p');
     var button = document.querySelector('.button-surprise');
-    button.parentNode.removeChild(button);
+
+    if (h1) h1.parentNode.removeChild(h1);
+    pElements.forEach(function (pElement) {
+        pElement.parentNode.removeChild(pElement);
+    });
 
     var messageContainer = document.createElement('div');
-    messageContainer.innerHTML = '<div style="text-align:center"><h1 style="color:white">I (REDACTED) you.</h1><p style="color:white">So, so, so much.</p></div>';
-    document.body.appendChild(messageContainer);
+    messageContainer.classList.add('overlay-content');
+    messageContainer.style.textAlign = 'center';
+    messageContainer.innerHTML = `
+        <h1 style="color:white">I (REDACTED) you.</h1>
+        <p style="color:white">So, so, so much.</p>
+    `;
+
+    var overlayContent = document.querySelector('.overlay-content');
+    overlayContent.appendChild(messageContainer);
+
+    button.parentNode.removeChild(button);
 
     startConfetti();
 }
+
 
 var maxParticleCount = 150; //set max confetti count
 var particleSpeed = 2; //set the particle animation speed
