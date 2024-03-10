@@ -109,6 +109,8 @@ function playerHasWon() {
     for (const condition of winningCombos) {
         let [a, b, c] = condition
 
+        
+
         if(spaces[a] != null && ((spaces[a]==spaces[b] || spaces[a] == 'Y') && (spaces[a]==spaces[c] || spaces[c] == 'Y') && (spaces[c]==spaces[b] || spaces[b] == 'Y'))){
             if(spaces[a] != 'Y'){
                 return spaces[a];
