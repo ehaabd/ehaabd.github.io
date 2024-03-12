@@ -12,7 +12,7 @@ function sayIt() {
     messageContainer.classList.add('overlay-content');
     messageContainer.style.textAlign = 'center';
     messageContainer.innerHTML = `
-        <h1 style="color:white">I (REDACTED) you.</h1>
+        <h1 style="color:white">I love you.</h1>
         <p style="color:white">So, so, so much.</p>
     `;
 
