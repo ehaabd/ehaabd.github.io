@@ -6,13 +6,14 @@ body {
 .navbar {
     background-color: #20493C; /* Dark Green */
     color: #FFFFFF; /* White */
-    padding: 10px 20px;
+    padding: 20px; /* Larger padding */
     text-align: center;
     border-bottom: 4px solid #6AC6AC; /* Light Green */
 }
 
 .navbar h1 {
     margin: 0;
+    font-size: 2em; /* Larger text size */
 }
 
 .container {
@@ -48,17 +49,16 @@ body {
 
 /* Adjust icon size for smaller screens */
 @media only screen and (max-width: 600px) {
-    .rounded-box img {
-        width: 40px; /* Smaller size for mobile */
-        height: 40px; /* Smaller size for mobile */
+    .navbar {
+        padding: 40px; /* Larger padding for mobile */
     }
-}
 
-.ad {
-    margin-top: 50px;
-    text-align: center;
-}
+    .navbar h1 {
+        font-size: 3em; /* Larger text size for mobile */
+    }
 
-.ad p {
-    color: #20493C; /* Dark Green */
+    .rounded-box img {
+        width: 30px; /* Smaller size for mobile */
+        height: 30px; /* Smaller size for mobile */
+    }
 }
