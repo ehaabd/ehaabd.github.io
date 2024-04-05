@@ -32,7 +32,7 @@ body {
     border-radius: 50%;
     background-color: #6AC6AC; /* Light Green */
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px; /* Add margin to create space between circles */
@@ -46,10 +46,6 @@ body {
 .rounded-box img {
     width: 40px; /* Default size */
     height: 40px; /* Default size */
-}
-
-.rounded-box p {
-    margin: 10px 0 0 0; /* Add margin to separate text from circle */
 }
 
 .ad {
