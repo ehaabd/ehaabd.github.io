@@ -14,6 +14,7 @@ body {
 .navbar h1 {
     margin: 0;
     font-size: 2em; /* Larger text size */
+    font-family: "Abadi", sans-serif; /* New font for the title */
 }
 
 .container {
@@ -46,10 +47,6 @@ body {
 .rounded-box img {
     width: 40px; /* Default size */
     height: 40px; /* Default size */
-}
-
-.rounded-box p {
-    font-size: 0.8em; /* Adjusted smaller text size */
 }
 
 .ad {
@@ -85,9 +82,5 @@ body {
     .rounded-box img {
         width: 30px; /* Smaller size for mobile */
         height: 30px; /* Smaller size for mobile */
-    }
-
-    .rounded-box p {
-        font-size: 0.6em; /* Adjusted smaller text size for mobile */
     }
 }
