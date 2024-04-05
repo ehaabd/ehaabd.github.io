@@ -63,7 +63,6 @@ body {
     align-items: center;
     justify-content: flex-end; /* Right justify */
     padding-right: 20px; /* Adjust right padding for positioning */
-    margin-bottom: 20px; /* Add margin below the cart icon */
 }
 
 .cart-container .rounded-box img {
@@ -81,7 +80,6 @@ body {
     align-items: center;
     justify-content: flex-start; /* Left justify */
     padding-left: 20px; /* Adjust left padding for positioning */
-    margin-bottom: 20px; /* Add margin below the house icon */
 }
 
 .house-container .rounded-box img {
