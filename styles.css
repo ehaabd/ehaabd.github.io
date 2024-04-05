@@ -76,6 +76,24 @@ body {
     height: 60px; /* Adjusted size for the cart icon container */
 }
 
+.house-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left justify */
+    padding-left: 20px; /* Adjust left padding for positioning */
+    margin-bottom: 20px; /* Add margin below the house icon */
+}
+
+.house-container .rounded-box img {
+    width: 30px; /* Adjusted size for the house icon */
+    height: 30px; /* Adjusted size for the house icon */
+}
+
+.house-container .rounded-box.small {
+    width: 60px; /* Adjusted size for the house icon container */
+    height: 60px; /* Adjusted size for the house icon container */
+}
+
 /* Adjust icon size for smaller screens */
 @media only screen and (max-width: 600px) {
     .navbar {
@@ -113,5 +131,19 @@ body {
     .cart-container .rounded-box.small {
         width: 40px; /* Adjusted size for the cart icon container for mobile */
         height: 40px; /* Adjusted size for the cart icon container for mobile */
+    }
+
+    .house-container {
+        padding-left: 10px; /* Adjust left padding for mobile */
+    }
+
+    .house-container .rounded-box img {
+        width: 20px; /* Adjusted size for the house icon for mobile */
+        height: 20px; /* Adjusted size for the house icon for mobile */
+    }
+
+    .house-container .rounded-box.small {
+        width: 40px; /* Adjusted size for the house icon container for mobile */
+        height: 40px; /* Adjusted size for the house icon container for mobile */
     }
 }
