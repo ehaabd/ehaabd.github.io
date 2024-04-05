@@ -27,8 +27,8 @@ body {
 }
 
 .rounded-box {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Smaller size */
+    height: 120px; /* Smaller size */
     border-radius: 50%;
     background-color: #6AC6AC; /* Light Green */
     display: flex;
@@ -39,13 +39,13 @@ body {
 }
 
 .rounded-box.large {
-    width: 200px;
-    height: 200px;
+    width: 160px; /* Larger size */
+    height: 160px; /* Larger size */
 }
 
 .rounded-box img {
-    width: 50px; /* Default size */
-    height: 50px; /* Default size */
+    width: 40px; /* Default size */
+    height: 40px; /* Default size */
 }
 
 .ad {
@@ -69,7 +69,17 @@ body {
     }
 
     .rounded-box {
-        width: 120px; /* Smaller size for mobile */
-        height: 120px; /* Smaller size for mobile */
+        width: 100px; /* Smaller size for mobile */
+        height: 100px; /* Smaller size for mobile */
+    }
+
+    .rounded-box.large {
+        width: 140px; /* Larger size for mobile */
+        height: 140px; /* Larger size for mobile */
+    }
+
+    .rounded-box img {
+        width: 30px; /* Smaller size for mobile */
+        height: 30px; /* Smaller size for mobile */
     }
 }
