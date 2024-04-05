@@ -1,6 +1,6 @@
 body {
     background-color: #FFFFFF; /* White */
-    font-family: Arial, sans-serif;
+    font-family: "GT America", sans-serif; /* GT America font */
 }
 
 .navbar {
@@ -14,7 +14,6 @@ body {
 .navbar h1 {
     margin: 0;
     font-size: 2em; /* Larger text size */
-    font-family: "Abadi", sans-serif; /* New font for the title */
 }
 
 .container {
@@ -77,16 +76,6 @@ body {
     height: 60px; /* Adjusted size for the cart icon container */
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: 4px solid #20493C; /* Dark Green */
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px; /* Adjust margin top */
-}
-
 /* Adjust icon size for smaller screens */
 @media only screen and (max-width: 600px) {
     .navbar {
@@ -111,32 +100,18 @@ body {
         width: 30px; /* Smaller size for mobile */
         height: 30px; /* Smaller size for mobile */
     }
+
     .cart-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 20px; /* Adjust left padding for positioning */
-    margin-bottom: 20px; /* Add margin below the cart icon */
-}
+        padding-right: 10px; /* Adjust right padding for mobile */
+    }
 
-.cart-container .rounded-box img {
-    width: 30px; /* Adjusted size for the cart icon */
-    height: 30px; /* Adjusted size for the cart icon */
-}
+    .cart-container .rounded-box img {
+        width: 20px; /* Adjusted size for the cart icon for mobile */
+        height: 20px; /* Adjusted size for the cart icon for mobile */
+    }
 
-.cart-container .rounded-box.small {
-    width: 60px; /* Adjusted size for the cart icon container */
-    height: 60px; /* Adjusted size for the cart icon container */
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: 4px solid #20493C; /* Dark Green */
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px; /* Adjust margin top */
-}
-
+    .cart-container .rounded-box.small {
+        width: 40px; /* Adjusted size for the cart icon container for mobile */
+        height: 40px; /* Adjusted size for the cart icon container for mobile */
+    }
 }
